@@ -1,30 +1,16 @@
-// Original function with variable instantiation using var
-function taskFirst() {
-    var foo = "Hello";
-    var bar = "World";
-  
-    console.log(foo, bar);
-  }
-  
-  // Modified function with variable instantiation using const
-  function taskFirstModified() {
-    const foo = "Hello";
-    const bar = "World";
-  
-    console.log(foo, bar);
-  }
-  
-  // Original function with variable instantiation using var
-  function taskNext() {
-    for (var i = 0; i < 5; i++) {
-      console.log(i);
-    }
-  }
-  
-  // Modified function with variable instantiation using let
-  function taskNextModified() {
-    for (let i = 0; i < 5; i++) {
-      console.log(i);
-    }
-  }
-  
+
+export function taskFirst() {
+  const task = 'I prefer const when I can.';
+  return task;
+}
+
+export function getLast() {
+  return ' is okay';
+}
+
+export function taskNext() {
+  let combination = 'But sometimes let';
+  combination += getLast();
+
+  return combination;
+}
